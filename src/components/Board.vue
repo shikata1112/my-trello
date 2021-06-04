@@ -22,6 +22,7 @@
   import ListAdd from './ListAdd.vue'
   import List from './List'
   import { mapState } from 'vuex'
+  // import CardAdd from './CardAdd.vue'
 
   export default {
     components: {
