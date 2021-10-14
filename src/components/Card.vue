@@ -11,30 +11,32 @@
 
 <script>
 export default {
-  
   props: {
     body: {
       type: String,
-      require: true
+      require: true,
     },
 
     listIndex: {
-      type:Number,
-      required: true
+      type: Number,
+      required: true,
     },
 
     cardIndex: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
 
   methods: {
     removeCardFromList() {
-      if(confirm("本当にこのカードを削除しますか？")) {
-        this.$store.dispatch("removeCardFromList", { cardIndex: this.cardIndex, listIndex: this.listIndex })
+      if (confirm("本当にこのカードを削除しますか？")) {
+        this.$store.dispatch("removeCardFromList", {
+          cardIndex: this.cardIndex,
+          listIndex: this.listIndex,
+        });
       }
     },
-  }
-}
+  },
+};
 </script>
